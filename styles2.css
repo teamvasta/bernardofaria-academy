@@ -1017,7 +1017,7 @@ img { max-width: 100%; display: block; }
   line-height: 2;
 }
 .diff-card li::before {
-  content: '• ';
+  content: '\2022  ';
   color: var(--gold);
 }
 
@@ -1125,7 +1125,7 @@ img { max-width: 100%; display: block; }
   line-height: 2.2;
 }
 .system-section__list li::before {
-  content: '• ';
+  content: '\2022  ';
   color: var(--gold);
 }
 
