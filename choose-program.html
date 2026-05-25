@@ -1047,7 +1047,10 @@
       userInfo.phone = document.getElementById('infoPhone').value.trim();
       userInfo.additionalInfo = document.getElementById('infoAdditional').value.trim();
 
-      // Conversion events fire on book.html Continue button only (to avoid duplicate leads)
+      // Fire Facebook Pixel Lead Event
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead');
+      }
 
       submitBooking();
     });

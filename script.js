@@ -88,4 +88,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ========== GoHighLevel / LeadConnector Form Submit Tracking (Facebook Pixel) ==========
+  window.addEventListener("message", function(event) {
+    // Check if message is from a GoHighLevel form submission
+    if (event.data && (
+      event.data === 'FORM_SUBMITTED' || 
+      event.data.type === 'FORM_SUBMITTED' || 
+      (typeof event.data === 'string' && event.data.indexOf('FORM_SUBMITTED') !== -1)
+    )) {
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead');
+        console.log("Facebook Pixel Lead event tracked successfully.");
+      }
+    }
+  });
+
 });
