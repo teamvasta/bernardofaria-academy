@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ========== GoHighLevel / LeadConnector Form Submit Tracking (Facebook Pixel) ==========
+  // ========== GoHighLevel / LeadConnector Form Submit Tracking ==========
   window.addEventListener("message", function(event) {
     // Check if message is from a GoHighLevel form submission
     if (event.data && (
@@ -96,9 +96,17 @@ document.addEventListener('DOMContentLoaded', () => {
       event.data.type === 'FORM_SUBMITTED' || 
       (typeof event.data === 'string' && event.data.indexOf('FORM_SUBMITTED') !== -1)
     )) {
+      // Facebook Pixel Lead Event
       if (typeof fbq === 'function') {
         fbq('track', 'Lead');
-        console.log("Facebook Pixel Lead event tracked successfully.");
+      }
+      // Google Ads Lead Form Conversion
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-815304866/4bv0CNyC27wcEKKh4oQD',
+          'value': 1.0,
+          'currency': 'USD'
+        });
       }
     }
   });
