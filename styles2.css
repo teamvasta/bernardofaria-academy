@@ -826,10 +826,10 @@ img { max-width: 100%; display: block; }
 
 .footer .container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
 }
 
 .footer__logo-text {
