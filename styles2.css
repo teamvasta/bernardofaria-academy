@@ -848,8 +848,6 @@ img { max-width: 100%; display: block; }
   height: 50px;
   width: auto;
   display: block;
-  filter: invert(1);
-  mix-blend-mode: screen;
 }
 
 .footer__columns {
