@@ -321,6 +321,10 @@ img { max-width: 100%; display: block; }
 .navbar__cta {
   font-size: 0.72rem !important;
   padding: 10px 20px;
+  color: var(--white) !important;
+}
+.navbar__cta:hover {
+  color: var(--white) !important;
 }
 
 /* Dropdown */
