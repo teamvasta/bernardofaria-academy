@@ -90,14 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (typeof fbq === 'function') {
         fbq('track', 'Lead');
       }
-      // Google Ads Lead Form Conversion
-      if (typeof gtag === 'function') {
-        gtag('event', 'conversion', {
-          'send_to': 'AW-815304866/5E0dCKjmr88cEKKh4oQD',
-          'value': 1.0,
-          'currency': 'USD'
-        });
-      }
     }
   });
 
