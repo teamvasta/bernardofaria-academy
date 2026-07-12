@@ -77,16 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Contact form is now handled by each page's inline script (redirects to choose-program.html)
 
-  // ========== Phone Call Click Tracking (Google Ads) ==========
-  document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
-    link.addEventListener('click', function() {
-      if (typeof gtag === 'function') {
-        gtag('event', 'conversion', {
-          'send_to': 'AW-18081811778/b_8ZCK6joZocEMKaiq5D'
-        });
-      }
-    });
-  });
 
   // ========== GoHighLevel / LeadConnector Form Submit Tracking ==========
   window.addEventListener("message", function(event) {
@@ -103,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Google Ads Lead Form Conversion
       if (typeof gtag === 'function') {
         gtag('event', 'conversion', {
-          'send_to': 'AW-815304866/4bv0CNyC27wcEKKh4oQD',
+          'send_to': 'AW-815304866/5E0dCKjmr88cEKKh4oQD',
           'value': 1.0,
           'currency': 'USD'
         });
