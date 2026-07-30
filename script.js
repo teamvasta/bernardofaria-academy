@@ -94,3 +94,25 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+// ========== Mobile Sticky CTA (show on scroll) ==========
+(function() {
+  var stickyCta = document.getElementById('mobile-sticky-cta');
+  if (!stickyCta) return;
+
+  var topBar = document.querySelector('.top-bar');
+  var navbar = document.querySelector('.navbar');
+  var triggerPoint = 0;
+
+  // Calculate when to show: after top-bar + navbar scroll out of view
+  if (topBar) triggerPoint += topBar.offsetHeight;
+  if (navbar) triggerPoint += navbar.offsetHeight;
+
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > triggerPoint) {
+      stickyCta.classList.add('visible');
+    } else {
+      stickyCta.classList.remove('visible');
+    }
+  });
+})();

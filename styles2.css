@@ -1908,3 +1908,56 @@ img { max-width: 100%; display: block; }
     padding: 20px 20px 24px;
   }
 }
+
+/* ============================================================
+   MOBILE STICKY CTA BAR
+   ============================================================ */
+.mobile-sticky-cta {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-sticky-cta {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    padding: 10px 16px;
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-100%);
+    transition: transform 0.35s ease;
+    pointer-events: none;
+  }
+
+  .mobile-sticky-cta.visible {
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .mobile-sticky-cta__btn {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    background: var(--gold, #c8a04a);
+    color: #fff;
+    text-align: center;
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+  }
+
+  .mobile-sticky-cta__btn:hover,
+  .mobile-sticky-cta__btn:active {
+    background: #b8903a;
+  }
+}
