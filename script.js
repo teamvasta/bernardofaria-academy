@@ -116,3 +116,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 })();
+
+// ========== Reviews Carousel Scroll Indicator ==========
+(function() {
+  const carousel = document.getElementById('reviews-carousel');
+  const thumb = document.getElementById('reviews-scroll-thumb');
+  if (!carousel || !thumb) return;
+
+  carousel.addEventListener('scroll', function() {
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+    if (maxScroll <= 0) return;
+    const progress = carousel.scrollLeft / maxScroll;
+    const trackWidth = thumb.parentElement.clientWidth;
+    const thumbWidth = thumb.clientWidth;
+    const maxTranslate = trackWidth - thumbWidth;
+    thumb.style.transform = 'translateX(' + (progress * maxTranslate) + 'px)';
+  });
+})();
