@@ -1223,7 +1223,7 @@ img.review-card__avatar {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
   margin-top: 30px;
-  max-width: 1000px;
+  max-width: 1250px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1241,7 +1241,7 @@ img.review-card__avatar {
   height: 180px;
   object-fit: cover;
 }
-.program-detail-card:first-child .program-detail-card__image {
+.program-detail-card:nth-child(2) .program-detail-card__image {
   filter: brightness(0.82) saturate(0.9);
 }
 .program-detail-card__content {
