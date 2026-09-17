@@ -1428,6 +1428,10 @@ img.review-card__avatar {
 .schedule-table td.empty {
   background: transparent;
 }
+.schedule-table td.kids-class {
+  background: rgba(200, 160, 74, 0.12);
+  border-left: 3px solid var(--gold);
+}
 
 .schedule-table td .time {
   font-weight: 700;
